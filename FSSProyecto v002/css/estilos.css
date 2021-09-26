@@ -1,0 +1,501 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    background: black;
+    font-family: sans-serif;
+    width:100%;
+    height:100%;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+/*esto es para centrar contenido*/
+.centrar {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.centrarnav {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*Esto es para item activo*/
+.activo {
+    color:red;
+}
+
+/*Esto es para item inactivo*/
+.inactivo {
+    color:gray;
+}
+
+.link a{
+    text-decoration: red;
+    color: rgba(211, 211, 211, 0.534);
+}
+.link a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+/*todo esto es la cabecera*/
+header{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: fixed;
+    background: black;
+}
+header .logo{
+    color: white;
+    font-size: 17px;
+    line-height: 100px;
+    float: left;
+    font-weight: 900;
+}
+header nav {
+    float: right;
+    line-height: 100px;  
+}
+header nav a {
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    line-height: normal;
+}
+header nav a:hover{
+    color: red;
+    text-decoration: none;
+}
+/*fin cabecera*/
+
+/*Esto es para generar un espacio en la parte superior pq el nav lo tapa*/
+.espaciotop {
+    padding-top: 150px;
+}
+
+.espaciotop2 {
+    padding-top: 80px;
+}
+
+/*Esto es para generar un espacio en la parte inferior*/
+.espaciobot {
+    padding-bottom: 130px;
+}
+
+/*Contenedor de portada*/
+.contenedor {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 100px; 
+}
+
+/*Titulo y subtitulo de portada PAGINA INICIO*/
+.title{
+    font-size: 300px;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(bg_1.jpg);
+    background-size: 100%;
+    margin-top: 80px;
+    background-attachment: fixed;
+    line-height: 300px;
+}
+.subtitle{
+    display: block;
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+/*Titulo de portada OTRAS PAGINAS */
+.title2{
+    text-transform: uppercase;
+    font-size: 120px;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(bg_1.jpg);
+    background-size: 90%;
+    margin-top: 100px;
+    background-attachment: fixed;
+    line-height: 200px;
+}
+
+/*esto es del contenido con etiqueta p*/
+p{
+    margin-bottom: 1em;
+    font-size: 17px;
+    color: gray;  
+}
+
+/*esto es para titulos*/
+.titulos{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*boton neon uwu*/
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon:hover {
+    background: darkred;
+    transition-delay: 1s;
+}
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, darkred);
+}
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, darkred);
+}
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2 {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, darkred);
+}
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4 {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, darkred);
+}
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+/*esto es la tabla del CRUD*/
+.contenido-tabla table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+    width: 800px;
+    height: 200px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.contenido-tabla tr {
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.contenido-tabla tbody tr{
+    background-color: black;
+    color: lightgrey;
+    text-align: left;
+}
+.contenido-tabla th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.575);
+    
+}
+.contenido-tabla thead #tabla-crud {
+    color: white;
+    text-align: center;
+    background-color: darkred;
+}
+.contenido-tabla tr:hover {
+    background-color: rgb(34, 32, 32);
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Esto es del formulario para añadir y editar*/
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+    color: white;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 2;
+}
+.contact-form form input {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: lightgray;
+    border-bottom: 1px solid #d63031;
+    font-size: 15px;
+}
+.contact-form form button{
+    margin-top: 40px;
+    width: 80%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr;
+        padding: 0 25em;
+        padding-top: 4em;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+/*esto es del FORMULARIO LOGIN*/
+.login-box {
+    width: 420px;
+    height: 520px;
+    background: #222222;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login-box p {
+    margin: 0;
+    padding: 1em;
+    color: white;
+    
+}
+.login-box input{
+    width: 100%;
+    padding: .9em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+.login-box form button{
+    width: 50%;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+}
+
+.login-box form button {
+    background: #B70E21;
+    padding: 1em;
+}
+.login-box form button:hover {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+/*esto es del footer*/
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .footer .sec{
+    margin-right: 30px;
+}
+footer .footer .sec.about{
+    width: 30%;
+}
+footer .footer h3{
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+footer .footer h3:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: red;
+}
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.sci li a:hover{
+    background: red;
+}
+.sci li a .fa{
+    color: white;
+    font-size: 20px;
+}
+.links{
+    position: relative;
+    width: 20%;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.links ul li a:hover{
+    color:white;
+}
+.contacto{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contacto .info{
+    position: relative;
+}
+.contacto .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contacto .info li span{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.copyText{
+    width: 100%;
+    padding: 10px 100px;
+    text-align: center;
+    color: #999;
+}
+.copyText hr {
+    border: 0px;
+    height: 1px;
+    background-color: darkred;
+}
+/*fin footer*/

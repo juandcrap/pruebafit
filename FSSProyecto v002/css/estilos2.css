@@ -1,0 +1,79 @@
+body {
+    background: #000 ;
+    font-family: 'bebas-neue', sans-serif;
+    font-weight: 400px;
+
+
+}
+
+textarea{
+    color:#ffffff;
+}
+
+.comentarios {
+    margin: 150px 0;
+}
+
+
+.form_comentarios textarea {
+width: 100%;
+height: 84px;
+max-width: 100%;
+min-width: 100%;
+min-height: 84px;
+max-height: 300px;
+padding: 10px;
+line-height: 30px;
+margin-bottom: 20px;
+background-color: #000;
+}
+
+.form_comentarios .btn {
+    background: rgba(255, 0, 0, 0.753);
+    border-radius: 0%;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.form_comentarios .btn:hover {
+    box-shadow: 0px 0px 9px rgba(0,0,0,.35);
+}
+
+.media {
+    border-top: 1px solid darkgray;
+    padding-top: 20px;
+}
+
+.media img{
+    margin-right: 20px;
+    margin-bottom: 0;
+    border-radius: 60%;
+}
+
+.media .nombre {
+    color: #ffffff;
+}
+.media .nombre span{
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+p {
+    color: lightgray;
+}
+.media .comentario {
+    margin-top: 10px;
+
+}
+
+.media .botones {
+    margin-bottom: 10px;
+
+}
+
+.media .botones a{
+    color: rgba(255, 0, 0, 0.747);
+    font-size: 14px;
+    margin-left: 20px;
+}
